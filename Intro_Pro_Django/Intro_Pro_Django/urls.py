@@ -20,5 +20,8 @@ from Intro_Pro_Django.views import *
 
 urlpatterns = [
     path('index',index),
-    path('wikisearch',wikisearch)
+    path('wikisearch',wikisearch),
+    path('login',login),
+    path('register',register),
+
 ]

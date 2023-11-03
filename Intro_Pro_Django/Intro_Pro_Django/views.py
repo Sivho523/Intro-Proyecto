@@ -5,3 +5,9 @@ def index (request):
 
 def wikisearch (request):
     return render(request,"wikisearch.html")
+
+def login (request):
+    return render(request,"login.html")
+
+def register (request):
+    return render(request,"register.html")
