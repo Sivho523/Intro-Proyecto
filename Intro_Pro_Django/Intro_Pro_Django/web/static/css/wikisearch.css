@@ -1,0 +1,12 @@
+.centered-search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .custom-paragraph {
+    line-height: 1.5; /* Set the line height to 1.5 times the font size */
+}
+.custom-font-size {
+    font-size: 24px;
+}
