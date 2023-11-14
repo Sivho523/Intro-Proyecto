@@ -16,4 +16,8 @@ def trivia (request):
     return render(request, "trivia.html")
 
 def xml (request):
+    url_medlineplusapi = urllib.request.Request(f'https://wsearch.nlm.nih.gov/ws/query?db=healthTopicsSpanish&term=asma')
+    source = urllib.request.urlopen(url_medlineplusapi).read()
+    obj = xmltodict.parse(source)
+    print(json.dumps(obj))
     return render(request, "trivia.html")
