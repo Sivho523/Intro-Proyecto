@@ -12,5 +12,8 @@ def login (request):
 def register (request):
     return render(request,"register.html")
 
+def trivia (request):
+    return render(request, "trivia.html")
+
 def xml (request):
     return render(request, "trivia.html")
