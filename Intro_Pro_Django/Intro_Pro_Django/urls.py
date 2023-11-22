@@ -23,5 +23,6 @@ urlpatterns = [
     path('wikisearch',wikisearch),
     path('login',login),
     path('register',register),
-    path('trivia',trivia)
+    path('trivia',trivia),
+    path('xml',xml)
 ]

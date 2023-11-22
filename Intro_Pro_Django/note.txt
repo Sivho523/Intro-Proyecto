@@ -1,0 +1,3 @@
+Buscar tutorial como mapear un Xml en un template de html.
+Para el wiki search, dentro de una etiqueta 'form' le doy un 'name'. Definirle un parametro action.
+Boton 'buscar' debe ser un submit.

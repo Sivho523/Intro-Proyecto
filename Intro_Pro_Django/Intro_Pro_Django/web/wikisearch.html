@@ -1,5 +1,6 @@
 {% load static %}
 {% load bootstrap5 %}
+{% csrf_token %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,11 +23,11 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
                 <div class="navbar-nav ms-auto">
-                  <a class="nav-link active" aria-current="page" href="index">Inicio</a>
-                  <a class="nav-link" href="wikisearch">Wiki</a>
-                  <a class="nav-link" href="#">Trivia</a>
-                  <a class="nav-link" href="#">Iniciar sesión</a>
-                  <a class="nav-link" href="#">Registrarse</a>
+                  <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Inicio</a>
+                  <a class="nav-link" href="http://127.0.0.1:8000/wikisearch">Wiki</a>
+                  <a class="nav-link" href="http://127.0.0.1:8000/trivia">Trivia</a>
+                  <a class="nav-link" href="http://127.0.0.1:8000/login">Iniciar sesión</a>
+                  <a class="nav-link" href="http://127.0.0.1:8000/register">Registrarse</a>
                   <!--<a class="nav-link disabled" aria-disabled="true">Disabled</a>-->
                 </div>
               </div>
@@ -54,8 +55,10 @@
             <div class="col-md-6 offset-md-3">
               <!-- Centered Search Bar -->
               <div class="centered-search-bar">
-                <input class="form-control" type="text" placeholder="Ej: Trastorno de identidad disociativo">
-                <button class="btn btn-success">Buscar</button>
+                <form action="xml" method="post">
+                <input name="sickness" class="form-control" type="text" placeholder="Ej: Trastorno de identidad disociativo">
+                <button type="submit" class="btn btn-success">Buscar</button>
+                </form>
               </div>
             </div>
           </div>

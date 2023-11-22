@@ -1,4 +1,6 @@
 from django.shortcuts import render
+import xmltodict, json
+import urllib
 
 def index (request):
     return render(request,"index.html")
@@ -16,8 +18,9 @@ def trivia (request):
     return render(request, "trivia.html")
 
 def xml (request):
-    url_medlineplusapi = urllib.request.Request(f'https://wsearch.nlm.nih.gov/ws/query?db=healthTopicsSpanish&term=asma')
+    condicion = request.POST['sickness']
+    condicion = condicion.replace(' ', '+')
+    url_medlineplusapi = urllib.request.Request(f'https://wsearch.nlm.nih.gov/ws/query?db=healthTopicsSpanish&term={condicion}')
     source = urllib.request.urlopen(url_medlineplusapi).read()
     obj = xmltodict.parse(source)
     print(json.dumps(obj))
-    return render(request, "trivia.html")
