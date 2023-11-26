@@ -55,7 +55,8 @@
             <div class="col-md-6 offset-md-3">
               <!-- Centered Search Bar -->
               <div class="centered-search-bar">
-                <form action="xml" method="post">
+                <form action="{% url 'xml' %}" method="post">
+                  {% csrf_token %}
                 <input name="sickness" class="form-control" type="text" placeholder="Ej: Trastorno de identidad disociativo">
                 <button type="submit" class="btn btn-success">Buscar</button>
                 </form>

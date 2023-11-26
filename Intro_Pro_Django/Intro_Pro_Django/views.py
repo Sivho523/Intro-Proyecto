@@ -24,3 +24,11 @@ def xml (request):
     source = urllib.request.urlopen(url_medlineplusapi).read()
     obj = xmltodict.parse(source)
     print(json.dumps(obj))
+
+    #list = obj["nlmSearchResult"]["list"]["document"][0]["content"][6]["#text"]
+    #list = list.replace("<p>","").replace('<span class="qt0">',"").replace("</span>","").replace("</p>","")
+    #data = { "resumen": list
+    #}
+
+    #return render(request, "resultados.html", data)
+    return render(request, "resultados.html", obj)

@@ -24,5 +24,5 @@ urlpatterns = [
     path('login',login),
     path('register',register),
     path('trivia',trivia),
-    path('xml',xml)
+    path('xml',xml, name= "xml")
 ]
